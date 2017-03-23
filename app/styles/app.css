@@ -1,22 +1,79 @@
-footer {
-  bottom: 0;
-  background-color: gray;
-  padding: 20px
+.header-links a {
+  color: white;
+  transition: .5s;
+  font-size: 1.2em;
+}
+
+.header-links a:hover {
+  color: #03E9F8;
+  font-size: 1.4em;
 }
 
 header {
-  background-color: gray;
-  padding: 20px;
+  background-color: #f2bce0;
+  padding-bottom: 10px;
+  font-family: laser;
+  color: #03E9F8;
+  box-shadow: 2px 2px 2px;
+
+}
+
+header h1 {
+  font-size: 4em;
 }
 
 body{
-  margin-top: 100px;
-  margin-bottom: 100px;
+  background-color: #688ff4;
+  margin-top: 150px;
+  margin-bottom: 70px;
+  bottom: 0;
+  font-family: neon;
 }
 
 button {
   margin: 5px;
+  background-color: #03E9F8;
 }
+
 img {
-  width: 800px;
+  width: 700px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+.admin-text {
+  font-size: 1.5em;
+}
+
+.admin-title {
+  font-size: 3em;
+
+}
+
+.center {
+  text-align: center;
+}
+
+.float {
+  float: right;
+}
+
+.logo {
+  text-align: center;
+}
+
+.main-container {
+  background-color: #FFFDC6;
+  font-size: 1.2em;
+  min-height: 1000px;
+  max-height: 1000px;
+  overflow-y: scroll;
+  padding: 25px;
+}
+
+.page-header {
+  font-size: 3em;
+  font-family: laser
 }

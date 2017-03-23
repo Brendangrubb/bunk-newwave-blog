@@ -1,24 +1,26 @@
 
 
-<h1>Admin Page</h1>
+<h1 class="center page-header">Admin Page</h1>
 
 <div class="addStory">
   {{new-article article=article saveArticle="saveArticle" hideUpdate="hideUpdate"}}
 </div>
-
+<br>
 {{#each model as |article|}}
-<div class="row">
-  <div class="col-md-1">
-    <button {{action "deleteArticle" article}}>Delete</button>
-  </div>
-  <div class="col-md-4">
-    {{#link-to 'article' article.id}}
-    <p>{{article.title}} By: {{article.author}}</p>
-    {{/link-to}}
-  </div>
-  <div class="col-md-7">
-    <div class="updateStory">
-      {{new-article article=article updateArticle="updateArticle" hideAdd="hideAdd"}}
+<div class="center">
+  <div class="row">
+    <div class="col-md-4">
+      <button class="btn btn-sm" {{action "deleteArticle" article}}>Delete</button>
+    </div>
+    <div class="col-md-4 center">
+      {{#link-to 'article' article.id}}
+      <p class="admin-text">{{article.title}} By: {{article.author}}</p>
+      {{/link-to}}
+    </div>
+    <div class="col-md-4">
+      <div class="updateStory">
+        {{new-article article=article updateArticle="updateArticle" hideAdd="hideAdd"}}
+      </div>
     </div>
   </div>
 </div>

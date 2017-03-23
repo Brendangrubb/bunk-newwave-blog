@@ -4,7 +4,7 @@
   {{input value=commentBody id="commentBody"}}
   <label for="user">Author</label>
   {{input value=user id="user"}}
-  <button {{action "postComment" article}}>Post Comment</button>
+  <button class="btn" {{action "postComment" article}}>Post Comment</button>
 </form>
 {{else}}
   <button  class="btn" {{action "openCommentForm"}}>Add A Comment</button>

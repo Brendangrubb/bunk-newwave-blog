@@ -1,11 +1,19 @@
+<head>
+   <style>@font-face { font-family: laser; src: url("laser.ttf")}</style>
+   <style>@font-face { font-family: neon; src: url("neon.ttf")}</style>
+</head>
+
 <header class="navbar navbar-fixed-top">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        {{#link-to 'admin'}}Admin{{/link-to}}
+      <h1 class="logo">New Wave Slaves</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-10">
+        <span class="header-links">{{#link-to 'index'}}Home{{/link-to}}</span> &nbsp; \\ &nbsp; <span class="header-links">{{#link-to 'contact'}}Contact{{/link-to}}</span>&nbsp; \\ &nbsp; <span class="header-links">{{#link-to 'about'}}About{{/link-to}}</span>
       </div>
-      <div class="col-md-6">
-        {{#link-to 'about'}}About{{/link-to}}
+      <div class="col-md-2">
+        <span class="header-links">{{#link-to 'admin'}}Admin{{/link-to}}</span>
       </div>
     </div>
   </div>
@@ -13,7 +21,7 @@
 
 <body>
 
-  <div class="container">
+  <div class="main-container container">
 
     {{outlet}}
 
@@ -21,13 +29,11 @@
 
 </body>
 
-<footer class="navbar navbar-fixed-bottom">
+<!-- <footer class="navbar navbar-fixed-bottom">
   <div class="row">
     <div class="col-md-6">
-      {{#link-to 'index'}}Home{{/link-to}}
     </div>
     <div class="col-md-6">
-      {{#link-to 'contact'}}Contact{{/link-to}}
     </div>
   </div>
-</footer>
+</footer> -->

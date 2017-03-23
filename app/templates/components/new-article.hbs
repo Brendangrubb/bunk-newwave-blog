@@ -1,30 +1,38 @@
 {{#if addStory}}
-  <form class="" action="index.html" method="post">
-    <label for="title">Title</label>
-    {{input value=title id="title"}}
-    <label for="author">Author</label>
-    {{input value=author id="author"}}
-    <label for="teaser">teaser text</label>
-    {{input value=teaser id="teaser"}}
-    <label for="body">Body</label>
-    {{textarea rows=6 value=body id="body"}}
-    <label for="image">Image URL</label>
-    {{input value=image id="image"}}
-    <label for="tags">tags</label>
-    {{input value=tags id="tags"}}
-    <label for="category">category</label>
-    {{input value=category id="category"}}
-
-    {{#if article}}
-        <button {{action "updateArticle" article}}>Update</button>
-    {{else}}
-        <button {{action "saveArticle"}}>Save</button>
-    {{/if}}
+  <div class="row">
+    <form class="" action="index.html" method="post">
+      <div class="col-md-6">
+          <label class="form-group" for="title">Title</label>
+          {{input class="form-control" value=title id="title"}}
+          <label class="form-group"  for="author">Author</label>
+          {{input class="form-control" value=author id="author"}}
+          <label class="form-group"  for="teaser">teaser text</label>
+          {{input class="form-control" value=teaser id="teaser"}}
+          <label class="form-group"  for="image">Image URL</label>
+          {{input class="form-control" value=image id="image"}}
+          <label class="form-group"  for="tags">tags</label>
+          {{input class="form-control" value=tags id="tags"}}
+          <label class="form-group"  for="category">category</label>
+          {{input class="form-control" value=category id="category"}}
+      </div>
+      <div class="col-md-6">
+        <label class="form-group"  for="body">Body</label>
+        {{textarea class="form-control" rows=18 value=body id="body"}}
+        <br>
+          {{#if article}}
+          <button class="btn" {{action "updateArticle" article}}>Update</button>
+          {{else}}
+          <button class="btn" {{action "saveArticle"}}>Save</button>
+          {{/if}}
+      </div>
   </form>
+  </div>
 {{else}}
     {{#if article}}
-      <button {{action 'showUpdateStoryForm'}}>Update Story</button>
+      <button class="btn btn-sm" {{action 'showUpdateStoryForm'}}>Update</button>
     {{else}}
-      <button {{action 'showAddStoryForm'}}>Add A New Story</button>
+    <div class="center">
+      <button class="btn" {{action 'showAddStoryForm'}}>Add A New Story</button>
+    </div>
     {{/if}}
 {{/if}}
